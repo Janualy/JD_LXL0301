@@ -28,7 +28,7 @@ exports.main_handler = async (event, context, callback) => {
           break;
         default:
           //4.执行国内gitee远端的js文件(如果部署在国内节点，选择1或3。默认使用gitee的方式)
-          request(`https://jdsharedresourcescdn.azureedge.net/jdresource/${v}.js`, function (error, response, body) {
+          request(`https://cdn.jsdelivr.net/gh/Janualy/JD_LXL0301@master/${v}.js`, function (error, response, body) {
             eval(response.body)
           })
           break;
